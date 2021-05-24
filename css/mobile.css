@@ -1,0 +1,131 @@
+:root {
+    font-size: 8px;
+}
+
+
+
+/* Navigation */
+#main-nav .social {
+    display: none;
+}
+
+#main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+#main-nav ul,
+#main-nav a.logo {
+    justify-self: center;
+
+}
+
+#main-nav .logo {
+    width: 200px;
+    margin-bottom: .6rem;
+}
+
+#main-nav ul li a {
+    padding: 1.9rem 3rem;
+}
+
+/* Showcase */
+#showcase .showcase-container {
+    grid-template-columns:  1fr;
+}
+
+#showcase .showcase-content {
+    text-align: center;
+}
+
+#showcase .showcase-content h1:before {
+    display: none;
+}
+
+#showcase .showcase-content h1 {
+    font-size: 6.8rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Articles */
+#home-articles .articles-container {
+    grid-template-columns: repeat(2,1fr);
+}
+
+#home-articles .articles-container > *:last-child,
+#home-articles .articles-container > *:first-child {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+}
+
+/* Phone */
+@media(max-width: 600px) {
+    /* Stack Grid Items */
+
+    #showcase .showcase-container {
+        height: 50vh;
+    }
+    #home-articles .articles-container,
+    #main-footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+    #home-articles .articles-container img {
+        height: 200px;
+        object-fit: cover;
+    }
+    #home-articles h2{
+        text-align: center;
+    }
+    #home-articles h2::before {
+        display: none;
+    }
+
+    .page-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .page-container > *:first-child {
+        grid-row: 1;
+    }
+
+    .page-container img {
+        height: 100px;
+        object-fit:scale-down;
+    }
+
+    .page-container .meta {
+        flex-direction: column;
+    }
+
+    .page-container .meta .category {
+        margin-top: 1rem;
+    }
+
+    .l-heading::before {
+        display: none;
+    }
+
+    #main-footer .footer-container > *:last-child {
+        grid-column: 1;
+    }
+
+    #main-footer .footer-container input[type='email'],
+    #main-footer .footer-container input[type='button'],
+    #main-footer .footer-container input[type='submit'],
+    #main-footer .footer-container .list li {
+        width: 100%;
+    }
+
+    /* #main-footer .footer-container > *:nth-child(2),
+    #main-footer .footer-container > *:first-child > * {
+        border-bottom: #444 dotted 1px;
+        padding-bottom: 2rem;
+    } */
+
+    #main-footer .footer-container > * {
+        padding-bottom: 2rem;
+    }
+
+}
